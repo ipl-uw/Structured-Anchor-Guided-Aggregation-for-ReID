@@ -1,0 +1,70 @@
+{
+    "_comment": "Default config for Market-1501.",
+
+    "dataset": "market1501",
+    "dataset_root": "/path/to/market1501",
+    "checkpoint_dir": "output/market1501",
+
+    "img_size": [256, 128],
+    "stride_size": [12, 12],
+    "pixel_mean": [0.5, 0.5, 0.5],
+    "pixel_std": [0.5, 0.5, 0.5],
+
+    "stage1_epochs": 100,
+    "stage1_lr": 3.5e-4,
+    "stage1_warmup": 5,
+    "stage1_batch": 64,
+    "stage1_save_period": 10,
+
+    "stage2_epochs": 80,
+    "stage2_lr": 5e-6,
+    "stage2_milestones": [40, 70],
+    "stage2_warmup_iters": 10,
+
+    "lambda_id": 0.25,
+    "lambda_triplet": 1.0,
+    "lambda_i2t": 1.0,
+    "lambda_div": 0.05,
+    "lambda_cls_div": 0.5,
+    "lambda_anc_cons": 0.0,
+    "margin": 0.3,
+
+    "s3_token_layer": 9,
+    "s3_token_layers": null,
+    "s3_anchor_part_ctx": 12,
+    "s3_num_classifiers": 4,
+    "s3_classifier_lr_scale": 1.0,
+    "s3_classifier_dropout": 0.0,
+    "s3a_epochs": 20,
+    "s3a_lr": 3.5e-4,
+    "s3a_warmup": 5,
+    "s3b_epochs": 80,
+    "s3b_lr": 2e-4,
+    "s3b_warmup": 5,
+    "stage3_save_period": 10,
+    "s3_num_views": 4,
+    "s3_num_anchors": 24,
+    "s3_num_domain_anchors": 3,
+    "s3_refine_layers": 2,
+    "s3_embed_dim": 768,
+    "s3_dropout": 0.1,
+    "s3_min_lr_ratio": 0.5,
+    "s3_eval_part_k": 0,
+
+    "enable_stage4": false,
+    "eval_rerank": false,
+    "eval_tta": false,
+
+    "batch_size": 64,
+    "num_instance": 4,
+    "weight_decay": 1e-4,
+    "num_workers": 8,
+    "eval_period": 10,
+
+    "use_clip_domain_anchors": false,
+    "use_sie_camera": false,
+    "sie_coe": 3.0,
+    "use_v1_features": false
+}
+
+
